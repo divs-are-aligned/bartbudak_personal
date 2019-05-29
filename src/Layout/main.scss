@@ -1,0 +1,117 @@
+.root {
+  padding: 1rem;
+  color: white;
+  background-color: #184a45;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  animation: moveright 1500ms ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 6rem;
+    top: 50%;
+    left: 2rem;
+    width: 100%;
+    background-color: #ff6f61;
+    z-index: -1;
+    animation: after 1500ms ease-in-out;
+  }
+
+  &:after {
+    content: "coming soon...";
+    font-size: 1rem;
+    position: absolute;
+    height: 6rem;
+    top: 50%;
+    left: 2rem;
+    width: 100%;
+    color: white;
+    z-index: -1;
+    animation: after 1500ms ease-in-out;
+  }
+}
+
+@media screen and (min-width: 681px) {
+  .title:after {
+    content: "";
+  }
+}
+.coming-soon {
+  top: 85%;
+  position: absolute;
+}
+@media screen and (max-width: 680px) {
+  .coming-soon {
+    display: none;
+  }
+}
+
+@keyframes moveright {
+  0% {
+    left: -2rem;
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    left: 2rem;
+  }
+}
+@keyframes moveleft {
+  0% {
+    right: 0%;
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    right: 10%;
+    opacity: 1;
+  }
+}
+
+@keyframes after {
+  0% {
+    left: 4rem;
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    left: 2rem;
+  }
+}
+
+.text {
+  border-bottom: 1px solid #b5bab6;
+}
+
+.info {
+  position: absolute;
+  padding-bottom: 1rem;
+  color: white;
+  top: 10%;
+  text-align: right;
+  right: 10%;
+  opacity: 0;
+  animation: moveleft 1500ms ease-in-out 600ms normal forwards;
+  z-index: 1;
+
+  button {
+    color: white !important;
+    cursor: pointer;
+  }
+}
