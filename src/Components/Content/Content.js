@@ -27,7 +27,8 @@ const Content = () => {
           transform: "translate(-50%)",
           zIndex: 4,
           maxHeight: "400vh",
-          overflowY: "hidden"
+          overflowY: "hidden",
+          mixBlendMode: "difference"
         }}
       >
         {[...Array(50)].map((e, i) => (
@@ -35,8 +36,7 @@ const Content = () => {
             key={i}
             aria-hidden="true"
             style={{
-              mixBlendMode: "difference",
-              color: "#c9af98",
+              color: "#f5f5f5",
               marginBottom: "2rem"
             }}
             variant="body1"
