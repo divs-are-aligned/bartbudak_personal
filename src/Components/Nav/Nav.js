@@ -36,6 +36,7 @@ const Nav = () => {
         >
           About
         </Link>
+        <br />
         <Link
           underline="hover"
           component="div"
@@ -43,6 +44,7 @@ const Nav = () => {
         >
           Current Work
         </Link>
+        <br />
         <Link
           underline="hover"
           component="div"
@@ -50,6 +52,7 @@ const Nav = () => {
         >
           Future Projects
         </Link>
+        <br />
         <Link
           underline="hover"
           component="div"
@@ -57,6 +60,7 @@ const Nav = () => {
         >
           Contact
         </Link>
+        <br />
         <Link
           underline="hover"
           href="https://drive.google.com/file/d/0B71klMpcGRmYZ2lVdVRZR3dPRFJ0U1lpdk4zOGRnUWZTN040/view?usp=sharing"

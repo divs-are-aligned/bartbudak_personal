@@ -33,6 +33,7 @@ const Content = () => {
         {[...Array(50)].map((e, i) => (
           <Typography
             key={i}
+            aria-hidden="true"
             style={{
               mixBlendMode: "difference",
               color: "#c9af98",
