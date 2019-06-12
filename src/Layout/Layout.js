@@ -1,33 +1,59 @@
 import React from "react";
-import { Grid, Typography, Button } from "@material-ui/core";
-import "./main.scss";
+import { Grid } from "@material-ui/core";
+import { Hero } from "../Components/Hero/index";
+import { Content } from "../Components/Content/index";
+import { Nav } from "../Components/Nav/index";
+import { makeStyles } from "@material-ui/styles";
 
-export default function Layout() {
+const useStyles = makeStyles(theme => ({
+  heroRoot: {
+    position: "relative",
+    padding: "1rem",
+    color: "whitesmoke",
+    backgroundColor: "#3a4660",
+    height: "100vh",
+    maxHeight: "100vh",
+    overflow: "hidden"
+  },
+  contentRoot: {
+    position: "relative",
+    color: "#3a4660",
+    backgroundColor: "whitesmoke",
+    height: "100vh",
+    maxHeight: "100vh",
+    [theme.breakpoints.up("sm")]: {
+      overflow: "hidden scroll"
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: "initial",
+      maxHeight: "initial"
+    },
+
+    border: ".5rem solid #c9af98"
+  }
+}));
+
+const Layout = () => {
+  const classes = useStyles();
   return (
-    <Grid className="root" alignContent="center" container>
-      <div className="info">
-        <Typography className="text" variant="h6">
-          Front-end Engineering
-          <br />
-          Design
-          <br />
-          User-experience
-        </Typography>
-        <Button
-          href="https://drive.google.com/file/d/0B71klMpcGRmYZ2lVdVRZR3dPRFJ0U1lpdk4zOGRnUWZTN040/view?usp=sharing"
-          component="button"
-          target="_blank"
-          color="secondary"
+    <>
+      <Nav />
+      <Grid alignContent="center" container>
+        <Grid className={classes.heroRoot} xs={12} sm={6} item>
+          <Hero />
+        </Grid>
+        <Grid
+          className={classes.contentRoot}
+          id="container"
+          xs={12}
+          sm={6}
+          item
         >
-          View Resume
-        </Button>
-      </div>
-      <Typography className="title" variant="h1">
-        Bart Budak
-      </Typography>
-      <Typography className="coming-soon title" variant="h6">
-        coming soon...
-      </Typography>
-    </Grid>
+          <Content />
+        </Grid>
+      </Grid>
+    </>
   );
-}
+};
+
+export default Layout;

@@ -1,13 +1,12 @@
 {
   "palette": {
     "primary": {
-      "main": "#471819"
+      "main": "#f5f5f5"
     },
     "secondary": {
-      "main": "#FFF"
+      "main": "#3a4660"
     }
   },
-
   "typography": {
     "fontFamily": "Futura",
     "useNextVariants": true
