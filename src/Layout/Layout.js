@@ -22,7 +22,8 @@ const useStyles = makeStyles(theme => ({
     height: "100vh",
     maxHeight: "100vh",
     [theme.breakpoints.up("sm")]: {
-      overflow: "hidden scroll"
+      overflow: "hidden scroll",
+      WebkitOverflowScrolling: "touch"
     },
     [theme.breakpoints.down("xs")]: {
       height: "initial",
