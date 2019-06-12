@@ -61,6 +61,7 @@ const Nav = () => {
           underline="hover"
           href="https://drive.google.com/file/d/0B71klMpcGRmYZ2lVdVRZR3dPRFJ0U1lpdk4zOGRnUWZTN040/view?usp=sharing"
           target="_blank"
+          rel="noopener"
         >
           View Resume
         </Link>
