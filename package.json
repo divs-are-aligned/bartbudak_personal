@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "latest",
+    "@babel/node": "latest",
+    "@babel/plugin-proposal-class-properties": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-react": "latest",
+    "babel-loader": "latest",
+    "cross-env": "latest",
+    "nodemon": "latest",
+    "npm-run-all": "latest",
+    "webpack-cli": "latest",
     "@material-ui/core": "^4.0.1",
     "@material-ui/icons": "^4.1.0",
     "@material-ui/styles": "^4.0.1",
@@ -12,14 +22,13 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "react-swipeable-views": "^0.13.3"
+    "react-swipeable-views": "^0.13.3",
+    "webpack": "^4.34.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start-dev": "react-scripts start"
+    "start": "npm-run-all -p build serve",
+    "build": "webpack -w",
+    "serve": "nodemon --ignore ./build --exec babel-node -- server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
