@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Content = () => {
+export function Content() {
   const classes = useStyles();
 
   return (
@@ -110,6 +110,6 @@ const Content = () => {
       </Grid>
     </>
   );
-};
+}
 
 export default Content;

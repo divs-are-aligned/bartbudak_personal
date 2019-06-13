@@ -64,8 +64,7 @@ const useStyles = makeStyles({
     }
   }
 });
-
-const Hero = () => {
+export function Hero() {
   const classes = useStyles();
 
   return (
@@ -78,6 +77,6 @@ const Hero = () => {
       </Typography>
     </>
   );
-};
+}
 
 export default Hero;

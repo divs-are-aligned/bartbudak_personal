@@ -43,7 +43,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Nav = () => {
+export function Nav() {
   const classes = useStyles();
   const [showMenu, setShowMenu] = useState(true);
 
@@ -141,6 +141,6 @@ const Nav = () => {
       )}
     </>
   );
-};
+}
 
 export default Nav;

@@ -1,8 +1,6 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import { Hero } from "../Components/Hero/index";
-import { Content } from "../Components/Content/index";
-import { Nav } from "../Components/Nav/index";
+import { Hero, Content, Nav } from "../Components/index";
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
