@@ -123,7 +123,7 @@ export function Nav() {
           <Link
             className={classes.link}
             underline="hover"
-            href="https://drive.google.com/file/d/0B71klMpcGRmYZ2lVdVRZR3dPRFJ0U1lpdk4zOGRnUWZTN040/view?usp=sharing"
+            href="https://drive.google.com/open?id=1oeFutgJ7e2Rtg10ilJ2kWJQJGA5_fvEs"
             target="_blank"
             rel="noopener"
             style={{ animationDelay: "400ms" }}
